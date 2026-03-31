@@ -12,6 +12,7 @@
         android:padding="24dp">
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MOON WIDGET"
@@ -19,9 +20,10 @@
             android:textSize="22sp"
             android:fontFamily="monospace"
             android:letterSpacing="0.2"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="4dp"/>
 
         <TextView
+            android:id="@+id/tv_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="НАСТРОЙКИ"
@@ -29,7 +31,62 @@
             android:textSize="11sp"
             android:fontFamily="monospace"
             android:letterSpacing="0.15"
-            android:layout_marginBottom="28dp"/>
+            android:layout_marginBottom="20dp"/>
+
+        <!-- ЯЗЫК -->
+        <TextView
+            android:id="@+id/tv_lang_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ЯЗЫК / LANGUAGE / 言語"
+            android:textColor="#888899"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="28dp">
+
+            <Button
+                android:id="@+id/btn_lang_en"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="EN"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#FFD700"
+                android:textColor="#0D0D1A"/>
+
+            <Button
+                android:id="@+id/btn_lang_ru"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="RU"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#222233"
+                android:textColor="#888899"/>
+
+            <Button
+                android:id="@+id/btn_lang_jp"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="JP"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:backgroundTint="#222233"
+                android:textColor="#888899"/>
+
+        </LinearLayout>
 
         <!-- ПРЕВЬЮ -->
         <LinearLayout
@@ -38,7 +95,6 @@
             android:orientation="horizontal"
             android:layout_marginBottom="36dp">
 
-            <!-- Обычная -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -48,6 +104,7 @@
                 android:layout_marginEnd="8dp">
 
                 <TextView
+                    android:id="@+id/tv_preview_now"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="СЕЙЧАС"
@@ -105,7 +162,6 @@
                 </RelativeLayout>
             </LinearLayout>
 
-            <!-- Полнолуние -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -114,6 +170,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/tv_preview_full"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ПОЛНОЛУНИЕ"
@@ -175,6 +232,7 @@
 
         <!-- ЦВЕТ ФОНА -->
         <TextView
+            android:id="@+id/tv_color_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ЦВЕТ ФОНА"
@@ -184,7 +242,6 @@
             android:letterSpacing="0.15"
             android:layout_marginBottom="14dp"/>
 
-        <!-- СВОТЧ + HEX INPUT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,32 +280,6 @@
                 android:imeOptions="actionDone"
                 android:hint="RRGGBB"
                 android:textColorHint="#333355"/>
-
-        </LinearLayout>
-
-        <!-- RGB СЛАЙДЕРЫ -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:text="R"
-                android:textColor="#FF4444"
-                android:textSize="12sp"
-                android:fontFamily="monospace"
-                android:layout_marginEnd="10dp"/>
-            <SeekBar
-                android:id="@+id/seek_r"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="255"
-                android:progressTint="#FF4444"
-                android:thumbTint="#FF4444"/>
         </LinearLayout>
 
         <LinearLayout
@@ -257,22 +288,26 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:text="G"
-                android:textColor="#44FF88"
-                android:textSize="12sp"
-                android:fontFamily="monospace"
-                android:layout_marginEnd="10dp"/>
-            <SeekBar
-                android:id="@+id/seek_g"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="255"
-                android:progressTint="#44FF88"
-                android:thumbTint="#44FF88"/>
+            <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                android:text="R" android:textColor="#FF4444" android:textSize="12sp"
+                android:fontFamily="monospace" android:layout_marginEnd="10dp"/>
+            <SeekBar android:id="@+id/seek_r" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:max="255" android:progressTint="#FF4444" android:thumbTint="#FF4444"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                android:text="G" android:textColor="#44FF88" android:textSize="12sp"
+                android:fontFamily="monospace" android:layout_marginEnd="10dp"/>
+            <SeekBar android:id="@+id/seek_g" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:max="255" android:progressTint="#44FF88" android:thumbTint="#44FF88"/>
         </LinearLayout>
 
         <LinearLayout
@@ -281,26 +316,17 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginBottom="24dp">
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:text="B"
-                android:textColor="#4488FF"
-                android:textSize="12sp"
-                android:fontFamily="monospace"
-                android:layout_marginEnd="10dp"/>
-            <SeekBar
-                android:id="@+id/seek_b"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:max="255"
-                android:progressTint="#4488FF"
-                android:thumbTint="#4488FF"/>
+            <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                android:text="B" android:textColor="#4488FF" android:textSize="12sp"
+                android:fontFamily="monospace" android:layout_marginEnd="10dp"/>
+            <SeekBar android:id="@+id/seek_b" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:max="255" android:progressTint="#4488FF" android:thumbTint="#4488FF"/>
         </LinearLayout>
 
         <!-- ПРЕСЕТЫ -->
         <TextView
+            android:id="@+id/tv_presets_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ПРЕСЕТЫ"
@@ -316,117 +342,57 @@
             android:orientation="horizontal"
             android:layout_marginBottom="32dp">
 
-            <LinearLayout
-                android:id="@+id/preset_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginEnd="8dp">
-                <View
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="#303030"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="GRAPHITE"
-                    android:textColor="#666677"
-                    android:textSize="7sp"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="5dp"/>
+            <LinearLayout android:id="@+id/preset_1"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:layout_marginEnd="8dp">
+                <View android:layout_width="36dp" android:layout_height="36dp" android:background="#303030"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="GRAPHITE" android:textColor="#666677" android:textSize="7sp"
+                    android:fontFamily="monospace" android:layout_marginTop="5dp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/preset_2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginEnd="8dp">
-                <View
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="#0D0D1A"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MIDNIGHT"
-                    android:textColor="#666677"
-                    android:textSize="7sp"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="5dp"/>
+            <LinearLayout android:id="@+id/preset_2"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:layout_marginEnd="8dp">
+                <View android:layout_width="36dp" android:layout_height="36dp" android:background="#0D0D1A"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="MIDNIGHT" android:textColor="#666677" android:textSize="7sp"
+                    android:fontFamily="monospace" android:layout_marginTop="5dp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/preset_3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginEnd="8dp">
-                <View
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="#1A0D2E"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PERSONA"
-                    android:textColor="#666677"
-                    android:textSize="7sp"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="5dp"/>
+            <LinearLayout android:id="@+id/preset_3"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:layout_marginEnd="8dp">
+                <View android:layout_width="36dp" android:layout_height="36dp" android:background="#1A0D2E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PERSONA" android:textColor="#666677" android:textSize="7sp"
+                    android:fontFamily="monospace" android:layout_marginTop="5dp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/preset_4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginEnd="8dp">
-                <View
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="#0A1628"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ABYSS"
-                    android:textColor="#666677"
-                    android:textSize="7sp"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="5dp"/>
+            <LinearLayout android:id="@+id/preset_4"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:layout_marginEnd="8dp">
+                <View android:layout_width="36dp" android:layout_height="36dp" android:background="#0A1628"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ABYSS" android:textColor="#666677" android:textSize="7sp"
+                    android:fontFamily="monospace" android:layout_marginTop="5dp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/preset_5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
+            <LinearLayout android:id="@+id/preset_5"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
                 android:gravity="center">
-                <View
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="VOID"
-                    android:textColor="#666677"
-                    android:textSize="7sp"
-                    android:fontFamily="monospace"
-                    android:layout_marginTop="5dp"/>
+                <View android:layout_width="36dp" android:layout_height="36dp" android:background="#000000"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="VOID" android:textColor="#666677" android:textSize="7sp"
+                    android:fontFamily="monospace" android:layout_marginTop="5dp"/>
             </LinearLayout>
 
         </LinearLayout>
-
 
         <!-- DARK HOUR -->
         <LinearLayout
@@ -451,6 +417,7 @@
                     android:fontFamily="monospace"
                     android:letterSpacing="0.15"/>
                 <TextView
+                    android:id="@+id/tv_dark_hour_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="зелёное свечение при полнолунии"
@@ -467,6 +434,7 @@
 
         <!-- ЭЛЕМЕНТЫ -->
         <TextView
+            android:id="@+id/tv_elements_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ЭЛЕМЕНТЫ"
@@ -483,6 +451,7 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="12dp">
             <TextView
+                android:id="@+id/tv_sw_full_moon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -490,10 +459,8 @@
                 android:textColor="#CCCCDD"
                 android:fontFamily="monospace"
                 android:textSize="13sp"/>
-            <Switch
-                android:id="@+id/switch_full_moon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Switch android:id="@+id/switch_full_moon"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:checked="true"/>
         </LinearLayout>
 
@@ -504,6 +471,7 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="12dp">
             <TextView
+                android:id="@+id/tv_sw_phase"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -511,10 +479,8 @@
                 android:textColor="#CCCCDD"
                 android:fontFamily="monospace"
                 android:textSize="13sp"/>
-            <Switch
-                android:id="@+id/switch_phase_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Switch android:id="@+id/switch_phase_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:checked="true"/>
         </LinearLayout>
 
@@ -525,6 +491,7 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="36dp">
             <TextView
+                android:id="@+id/tv_sw_illum"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -532,10 +499,8 @@
                 android:textColor="#CCCCDD"
                 android:fontFamily="monospace"
                 android:textSize="13sp"/>
-            <Switch
-                android:id="@+id/switch_illumination"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Switch android:id="@+id/switch_illumination"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:checked="true"/>
         </LinearLayout>
 

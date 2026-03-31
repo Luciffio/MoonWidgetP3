@@ -3,7 +3,7 @@
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0D0D1A"
+    android:background="@drawable/widget_bg"
     android:padding="14dp">
 
     <TextView
@@ -16,13 +16,13 @@
         android:textSize="10sp"
         android:letterSpacing="0.1"
         android:fontFamily="monospace"
-        android:text="FULL MOON" />
+        android:text="🌕 1 APR"/>
 
     <ImageView
         android:id="@+id/iv_moon"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_centerInParent="true" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:id="@+id/tv_phase_name"
@@ -34,7 +34,7 @@
         android:textSize="9sp"
         android:letterSpacing="0.12"
         android:fontFamily="monospace"
-        android:text="NEW MOON" />
+        android:text="NEW MOON"/>
 
     <TextView
         android:id="@+id/tv_illumination"
@@ -45,6 +45,6 @@
         android:textColor="#FFD700"
         android:textSize="16sp"
         android:fontFamily="monospace"
-        android:text="0%" />
+        android:text="0%"/>
 
 </RelativeLayout>
