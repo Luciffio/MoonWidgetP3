@@ -1,14 +1,15 @@
 # 🌙 MoonWidgetP3
 ![Platform](https://img.shields.io/badge/platform-Android-blue)
 
-A minimal Android widget inspired by the Persona 3 aesthetic.
+A minimal Android widget inspired by the Persona 3 aesthetic, focused on clean UI and simplicity.
 
 ## ✨ Features
 
-- 🌙 Persona 3 inspired design  
-- ⏰ Useful information display  
-- 🎨 Clean & minimal UI  
-- ⚡ Lightweight performance  
+- 🌙 Persona 3 inspired design
+- 🌘 Displays current moon phase
+- ⏰ Useful information display
+- 🎨 Clean & minimal UI
+- ⚡ Lightweight performance
 
 ## 📱 Preview
 
@@ -25,8 +26,6 @@ A minimal Android widget inspired by the Persona 3 aesthetic.
 * Kotlin
 * Android SDK
 * Android Widgets (AppWidget)
-
-
 
 ## ⚙️ Building
 
