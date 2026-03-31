@@ -1,5 +1,7 @@
 # 🌙 MoonWidgetP3
 ![Platform](https://img.shields.io/badge/platform-Android-blue)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
+![Language: Kotlin](https://img.shields.io/badge/language-Kotlin-purple)
 
 A minimal Android widget inspired by the Persona 3 aesthetic, focused on clean UI and simplicity.
 
